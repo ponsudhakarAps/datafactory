@@ -1,0 +1,79 @@
+{
+	"name": "set variable",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set length",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "length",
+					"value": 10
+				}
+			},
+			{
+				"name": "Set breath",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "breath",
+					"value": 10
+				}
+			},
+			{
+				"name": "area calc",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set length",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "Set breath",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "area",
+					"value": {
+						"value": "@string(mul(variables('breath'),variables('length')))",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"length": {
+				"type": "Integer",
+				"defaultValue": 10
+			},
+			"breath": {
+				"type": "Integer",
+				"defaultValue": 10
+			},
+			"area": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
