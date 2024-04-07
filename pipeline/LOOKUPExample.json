@@ -60,10 +60,10 @@
 			}
 		],
 		"parameters": {
-			"filename": {
+			"tablename": {
 				"type": "string"
 			},
-			"DBNAME": {
+			"dbname": {
 				"type": "string"
 			}
 		},
