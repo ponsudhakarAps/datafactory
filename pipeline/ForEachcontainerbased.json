@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Get Metadatacheck",
+				"name": "Get file name from the source",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
@@ -24,6 +24,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -32,11 +33,11 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "Coping file from source to desti",
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Get Metadatacheck",
+						"activity": "Get file name from the source",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -45,7 +46,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadatacheck').output",
+						"value": "@activity('Get file name from the source').output.childItems",
 						"type": "Expression"
 					},
 					"activities": [
