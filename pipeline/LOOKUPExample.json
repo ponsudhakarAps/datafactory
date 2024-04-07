@@ -44,11 +44,7 @@
 				"inputs": [
 					{
 						"referenceName": "AzureSqlTable1",
-						"type": "DatasetReference",
-						"parameters": {
-							"dbname": "dbo.DEPT",
-							"tablename": "DNAME"
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
@@ -60,10 +56,10 @@
 			}
 		],
 		"parameters": {
-			"tablename": {
+			"dbname": {
 				"type": "string"
 			},
-			"dbname": {
+			"tablename": {
 				"type": "string"
 			}
 		},
