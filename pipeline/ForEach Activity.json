@@ -83,7 +83,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "Dataforforeach",
+									"referenceName": "sourceFromMeta",
 									"type": "DatasetReference"
 								}
 							],
@@ -98,6 +98,17 @@
 				}
 			}
 		],
+		"parameters": {
+			"Dbname": {
+				"type": "string"
+			},
+			"Tablename": {
+				"type": "string"
+			},
+			"bks": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }

@@ -1,0 +1,30 @@
+{
+	"name": "sourceFromMeta",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Dbname": {
+				"type": "String"
+			},
+			"Tablename": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().Dbname",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().Tablename",
+				"type": "Expression"
+			}
+		}
+	}
+}
