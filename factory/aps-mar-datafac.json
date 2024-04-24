@@ -1,9 +1,0 @@
-{
-	"name": "aps-mar-datafac",
-	"location": "centralindia",
-	"identity": {
-		"type": "SystemAssigned",
-		"principalId": "2b0714d5-fa70-4847-bd52-2ba706cbae8e",
-		"tenantId": "820e2f06-2ab8-46a8-b7da-7b81a8f48673"
-	}
-}
