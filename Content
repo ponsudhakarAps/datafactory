@@ -1,2 +1,7 @@
 Types of activities = data movement,data transformation ,
 control flow......
+
+LINKESD SERVICES:
+Linked services are used to connect to other resources with ADF. these are like connection strings for string to connect.
+DATASETS:
+It si simply reference to the data, which want to use in the activities.
