@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "sales_data.txt",
 				"container": "output"
 			},
 			"columnDelimiter": ",",
